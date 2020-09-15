@@ -1613,8 +1613,22 @@ This repository is derived from the lectures covered in [Automate the Boring Stu
   ```
 
 ### 11.31 - Reading and Writing Plaintext Files
+- **Reading** plaintext files:
 
-- Three steps to **reading** plaintext files:
+  ```python
+  # Using with statement
+  
+  with open('file_path', 'w') as file:
+      file.write('hello world !')
+	  
+  # Without using with statement
+  
+  file = open('file_path', 'w')
+  file.write('hello world !')
+  file.close()
+  ```
+
+- **OLD WAY** Three steps to **reading** plaintext files:
 
   ```python
   # The `open()` function opens a plaintext file in "read mode" (default)
